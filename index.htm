@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>How to make it work?</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<div id="impress">
+		<div id="intro" class="step slide" data-x="-1000" data-y="-1500">
+			<strong>Impress.js</strong> 是一款基于css3转换和过渡、工作于<strong>现代浏览器</strong>(Google Chrome或Safari (或 Firefox 10 或 IE10))、并受prezi.com的理念启发的演示工具。如果你已经厌烦了使用PowerPoint制作PPT，那么impress.js是一个非常好的选择，用它做的PPT更加直观，效果也非常的不错。
+		</div>
+
+		<div id="advantages" class="step slide" data-x="0" data-y="-1500">
+			<strong style="font-size: 1.2em;">优势：</strong>
+			<ul>
+				<li>看起来更NB，有prezi的感觉，并且无需付费。</li>
+				<li>操作简单，代码量少</li>
+				<li>可适应浏览器播放ppt需要</li>
+			</ul>
+		</div>
+
+		<div id="disadvantages" class="step slide" data-x="1000" data-y="-1500">
+			<strong style="font-size: 1.2em;">劣势：</strong>
+			<ul>
+				<li>基于impress.js, 对禁用js的用户无效</li>
+				<li>基于impress.js控制css3属性实现效果，对低版本浏览器无效</li>
+				<li>需要具备一定的html/css知识</li>
+			</ul>
+		</div>
+
+		<div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+	        <span class="try">let's get closer to see</span>
+	        <h1>impress.js<sup>*</sup></h1>
+	        <span class="footnote"><sup>*</sup> an elegant presentation tool</span>
+	    </div>
+		
+		<div id="right1" class="step" data-x="2700" data-y="1500" data-rotate="90" data-scale="5">
+			<h2>属性：</h2>
+			<ul>
+				<li>data-x = 幻灯片的x坐标</li>
+				<li>data-y = 幻灯片的y坐标</li>
+				<li>data-scale = 缩放，如data-scale为5则在幻灯片原始尺寸基础放大5倍</li>
+				<li>data-rotate = 通过一个数字度数来确定旋转幻灯片</li>
+				<li>data-rotate-x = 为3D用，这个数字度数是它应该相对x轴旋转多少度。</li>
+				<li>data-rotate-y = 为3D用，这个数字度数是它应该相对y轴旋转多少度。</li>
+				<li>data-rotate-z = 为3D用，这个数字度数是它应该相对z轴旋转多少度。</li>
+			</ul>
+	    </div>
+
+	    <div id="right2" class="step" data-x="2000" data-y="4500" data-rotate="135" data-scale="4">
+			<h2>使用方法：</h2>
+			<ul>
+				<li>1. 下载impress.js</li>
+				<li>2. html中包含impress.js</li>
+				<li>3. 设置id为impress的div来包含所有幻灯片(也就是背景)</li>
+				<li>4. 添加一张幻灯片：在3中的div中设置class为step的div</li>
+				<li>5. 提示观看者浏览器不支持css3属性：设置class为fallback-message的div</li>
+				<li>6. data-rotate-z = 为3D用，这个数字度数是它应该相对z轴旋转多少度。</li>
+			</ul>
+	    </div>
+		
+		<div id="left1" class="step" data-x="-2000" data-y="4500" data-rotate="225" data-scale="4">
+			<h2>impress.js简述：</h2>
+			<ul>
+				<li> 创建空div=canvas，取得所有class为step的element组成root数组</li>
+				<li> 取得每个root数组中元素的css中的data-属性</li>
+				<li> 初始化视口中心位置为root中第一个元素的data-x和data-y</li>
+				<li> addEventListener，keyCode为↑，←，pageUp等键控制跳转到前一张幻灯片</li>
+				<li> 每次event被触发，刷新所有data-属性，变为前一张或者后一张幻灯的相应属性</li>
+			</ul>
+	    </div>
+
+	    <div id="left2" class="step" data-x="-2000" data-y="500" data-rotate="270" data-scale="5">
+			<h2>类似的表现层框架：</h2>
+			<ul>
+				<li>   html5slides</li>
+				<li>   deck.js</li>
+				<li>   bespoke.js</li>
+			</ul>
+	    </div>
+
+	    <div id="center" class="step" data-x="0" data-y="2000" data-rotate="0" data-scale="1">
+			<h2>Love it? Use it!</h2>
+			<span>Thanks for ur patience.</span>
+	    </div>
+
+	    <div id="overview" class="step" data-x="400" data-y="1500" data-scale="10">
+
+	</div>
+	<script src="js/impress.js"></script>
+	<script>impress().init();</script>
+</body>
+</html>
